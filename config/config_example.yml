@@ -1,0 +1,22 @@
+model:
+  rating_set: [1, 2, 3, 4, 5]
+  embedding_dim: 64
+  user_feature_dim: 78
+  item_feature_dim: 924
+  dropout_rate: 0.1
+
+optimizer:
+  class: Adam
+  lr: 0.001
+  weight_decay: 0.000000015
+
+sampler:
+  fanout: 3
+
+data:
+  mlog_data_path: "Path to which you dumped the data"
+
+train:
+  n_epoch: 2
+  batch_size: 1000
+  device: [cuda:0, cuda:1, cuda:2, cuda:3]
